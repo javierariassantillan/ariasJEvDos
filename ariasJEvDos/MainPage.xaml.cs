@@ -1,4 +1,7 @@
-﻿namespace ariasJEvDos
+﻿using System;
+using Microsoft.Maui.Controls;  
+
+namespace ariasJEvDos
 {
     public partial class MainPage : ContentPage
     {
