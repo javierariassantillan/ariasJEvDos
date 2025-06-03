@@ -3,10 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ariasJEvDos.ChistesPage"
              Title="ChistesPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <AbsoluteLayout Padding="20">
+        
+        <!-- ¿Qué le dice una roca a otra roca? La vida es dura :v -->
+        <Label x:Name="lblChiste"
+               Text="¿Qué le dice una roca a otra roca? La vida es dura :v"
+               FontSize="20"
+               HorizontalOptions="Center"
+               VerticalTextAlignment="Center"
+               AbsoluteLayout.LayoutBounds="0.5,0.4,0.9,0.5"
+               AbsoluteLayout.LayoutFlags="All"/>
+        
+        <Button Text="Otro chiste"
+                Clicked="OnOtroChisteClicked"
+                AbsoluteLayout.LayoutBounds="0.5,1,0.8,50"
+                AbsoluteLayout.LayoutFlags=""
+
+    </AbsoluteLayout>
 </ContentPage>
