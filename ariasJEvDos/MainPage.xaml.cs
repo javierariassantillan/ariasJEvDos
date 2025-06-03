@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.Maui.Controls;
-using ariasJEvDos.views;
+using ariasJEvDos;
 
 namespace ariasJEvDos
 {
@@ -15,7 +15,7 @@ namespace ariasJEvDos
 
         private async void VerChiste_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new ChistePage());
+            await Navigation.PushAsync(new ChistesPage());
 
         }
         private async void SobreMi_Clicked(object sender, EventArgs e)
