@@ -1,5 +1,6 @@
 ﻿using System;
-using Microsoft.Maui.Controls;  
+using Microsoft.Maui.Controls;
+using ariasJEvDos.views;
 
 namespace ariasJEvDos
 {
@@ -12,17 +13,16 @@ namespace ariasJEvDos
             InitializeComponent();
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        private async void VerChiste_Clicked(object sender, EventArgs e)
         {
-            count++;
+            await Navigation.PushAsync(new ChistePage());
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
         }
+        private async void SobreMi_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AboutPage());
+        }
+
     }
 
 }
