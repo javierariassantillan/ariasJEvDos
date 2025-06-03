@@ -1,12 +1,41 @@
-<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ariasJEvDos.AboutPage"
-             Title="AboutPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Sobre mí">
+
+    <Grid Padding="20"
+          RowDefinitions="Auto,Auto"
+          ColumnDefinitions="*,*"
+          ColumnSpacing="15"
+          RowSpacing="15">
+
+        <Frame BorderColor="Gray" CornerRadius="10" Padding="10">
+            <StackLayout>
+                <Label Text="Nombre:" FontAttributes="Bold"/>
+                <Label Text="Javier Arias"/>
+            </StackLayout>
+        </Frame>
+
+        <Frame Grid.Column="1" BorderColor="Gray" CornerRadius="10" Padding="10">
+            <StackLayout>
+                <Label Text="Fecha:" FontAttributes="Bold"/>
+                <Label Text="15/04/1998"/>
+            </StackLayout>
+        </Frame>
+
+        <Frame Grid.Row="1" BorderColor="Gray" CornerRadius="10" Padding="10">
+            <StackLayout>
+                <Label Text="Intereses:" FontAttributes="Bold"/>
+                <Label Text="Música, programación"/>
+            </StackLayout>
+        </Frame>
+
+        <Frame Grid.Row="1" Grid.Column="1" BorderColor="Gray" CornerRadius="10" Padding="10">
+            <StackLayout>
+                <Label Text="Versión:" FontAttributes="Bold"/>
+                <Label Text="v1.0"/>
+            </StackLayout>
+        </Frame>
+
+    </Grid>
 </ContentPage>

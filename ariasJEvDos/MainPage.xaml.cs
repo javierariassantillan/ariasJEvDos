@@ -1,28 +1,19 @@
-﻿using System;
-using Microsoft.Maui.Controls;
-using ariasJEvDos;
+﻿namespace ariasJEvDos;
 
-namespace ariasJEvDos
+public partial class MainPage : ContentPage
 {
-    public partial class MainPage : ContentPage
+    public MainPage()
     {
-        int count = 0;
-
-        public MainPage()
-        {
-            InitializeComponent();
-        }
-
-        private async void VerChiste_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new ChistesPage());
-
-        }
-        private async void SobreMi_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new AboutPage());
-        }
-
+        InitializeComponent();
     }
 
+    private async void IrAChistes(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync(nameof(ChistesPage));
+    }
+
+    private async void IrAAbout(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync(nameof(AboutPage));
+    }
 }

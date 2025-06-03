@@ -1,10 +1,12 @@
-﻿namespace ariasJEvDos
+﻿namespace ariasJEvDos;
+
+public partial class AppShell : Shell
 {
-    public partial class AppShell : Shell
+    public AppShell()
     {
-        public AppShell()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
+
+        Routing.RegisterRoute(nameof(ChistesPage), typeof(ChistesPage));
+        Routing.RegisterRoute(nameof(AboutPage), typeof(AboutPage));
     }
 }

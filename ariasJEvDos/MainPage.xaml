@@ -1,25 +1,18 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ariasJEvDos.MainPage"
-             Title="Pagina Principal">
+             Title="Inicio">
 
-    <StackLayout Padding="30" Spacing="20" VerticalOptions="Center">
-    <Label Text="Javier Arias" FontSize="32" HorizontalOptions="Center"/>
-
-    <Image Source="javier.png" HeightRequest="200" HorizontalOptions="Center"/>
-
-    <Button Text="Ver Chiste" Clicked="VerChiste_Clicked" />
-    <Button Text="Sobre mi" Clicked="SobreMi_Clicked" />
- </StackLayout>
- </ContentPage>   
-
-private async void VerChiste_Clicked(object sender, EventArgs e)
-{
-    await Navigation.PushAsync(new ChistePage());
-}  
-
-private async void SobreMi_Clicked(object sender, EventArgs e)
-{
-    await Navigation.PushAsync(new SobreMiPage());
-}
+    <StackLayout Padding="30" Spacing="20">
+        <Label Text="Javier Arias"
+               FontSize="28"
+               HorizontalOptions="Center" />
+        <Image Source="javier.png"
+               HeightRequest="200"
+               HorizontalOptions="Center" />
+        <Button Text="Ir a Chistes"
+                Clicked="IrAChistes" />
+        <Button Text="Sobre mí"
+                Clicked="IrAAbout" />
+    </StackLayout>
+</ContentPage>
